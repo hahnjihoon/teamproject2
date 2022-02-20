@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout07</title>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ae7dcd352a13c7cb367986eecf086982"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a2b9f6b6bc.js" crossorigin="anonymous"></script> <!-- 이모티콘 선언문 -->
+    <style>
+        body{
+            background: rgb(91 130 163 / 60%);
+            background-size:cover;
+            background-image: linear-gradient( rgb(91 130 163 / 60%), rgb(91 130 163 / 60%) ),url('static/assets/img/2.jpg');
+        };
+    };
+        /* 리셋 */
+        * {margin: 0; padding: 0;}
+
+        /* 전체 레이아웃 */
+        #wrap {font-size: 20px; color: black; text-align: center;}
+        #header {height: 70px;
+        }
+        #nav {height: 450px; line-height: 450px;
+
+}
+        #contents {height: 100%;
+
+}
+        #footer { height: 700px;}
+
+        .stay {
+        margin : 11px;
+        border: 1px ;
+        float:left;
+        width : 23%;
+        height : 40%;
+        box-sizing: border-box;
+        }
+        .cafe {
+        margin : 11px;
+        border: 1px ;
+        float:left;
+        width : 23%;
+        height : 40%;
+        box-sizing: border-box;
+        }
+        .tour {
+        margin : 11px;
+        border: 1px ;
+        float:left;
+        width : 23%;
+        height : 40%;
+        box-sizing: border-box;
+        }
+        .bicycle {
+        margin : 11px;
+        border: 1px ;
+        float:right;
+        width : 23%;
+        height : 40%;
+        box-sizing: border-box;
+        }
+        .subway {
+        margin : 11px;
+        border: 1px ;
+        float:left;
+        width : 23%;
+        height : 40%;
+        box-sizing: border-box;
+        }
+        .cinema {
+        margin : 11px;
+        border: 1px ;
+        float:left;
+        width : 23%;
+        height : 40%;
+        box-sizing: border-box;
+        }
+        .shopping{margin : 11px;
+        border: 1px ;
+        float:left;
+        width : 23%;
+        height : 40%;
+        box-sizing: border-box;
+        }
+        .text{margin : 11px;
+        border: 1px ;
+        float:left;
+        width : 23%;
+        height : 40%;
+        box-sizing: border-box;
+        }
+
+        /* 레이아웃 */
+        #header {height: 70px; line-height: 70px;}
+        #content1 {height: 1300px;  }
+        #footer-info { height: 300px; }
+
+        /* 컨테이너 */
+        .container {width: 1100px; margin: 0 auto; height: inherit; background: rgba(0,0,0,0.3);}
+.s-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.s-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.s-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #24b7a4;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+.s-title p {
+  margin-bottom: 0;
+}
+a{
+text-decoration-line:none;
+color:#24B7A4;
+}
+        /* 아이콘 스타일*/
+        .atag{
+          display:inline-block;
+          width:30%;
+          position:relative;
+          right : 30px;
+        }
+
+        .atag .icon-1  {
+          color: #adb5bd;
+          font-size: 55px;
+          text-align : center;
+        }
+
+        .atag .icon-2  {
+          color: #dc3545;
+          font-size: 55px;
+          text-align : center;
+        }
+
+        .atag .icon-3  {
+          color: #69e7ad;
+          font-size: 55px;
+          text-align : center;
+        }
+
+        </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header" >
+                <div class="container">서교동 핫플레이스</div>
+        </div>
+        <!-- //header -->
+        <div id="nav">
+            <div class="container">
+                <a href = "stay"><img class="stay" src="{% static 'assets/img/stay1.jpg' %}"></a>
+                <a href = "cafe"><img class="cafe" src="{% static 'assets/img/cafe1.jpg' %}"></a>
+                <a href = "tour"><img class="tour" src="{% static 'assets/img/tour1.jpg' %}"></a>
+                <a href = "bicycle"><img class="bicycle" src="{% static 'assets/img/bicycle1.jpg' %}"></a>
+                <a href = "subway"><img class="subway" src="{% static 'assets/img/subway1.jpg' %}"></a>
+                <a href = "cinema"><img class="cinema" src="{% static 'assets/img/cinema1.jpg' %}"></a>
+                <a href = "shopping"><img class="shopping" src="{% static 'assets/img/shopping1.jpg' %}"></a>
+                <img class="text" src="{% static 'assets/img/text.png' %}">
+            </div>
+        </div>
+        <!-- banner -->
+        <div id="contents">
+
+
+            <div id = "content1">
+                {% if center != None %}
+                {% include center %}
+                {% else %}
+                    <div class="container"></div>
+
+                {% endif %}
+            </div>
+
+
+        </div>
+        <!-- //contents -->
+<div id="footer">
+            <div id="footer-nav">
+             <section id="about" class="about">
+               <div class="container">
+                <a href="{% url 'home' %}"><h1 style="color:white; position: absolute; left: 43%; font-family: 'Gugi', cursive;">서교동 소식</h1></a><br><br>
+                <a class="atag" href="{% url 'food' %}"><br>
+                  <div class="col-lg-4 col-md-6 icon-box" style="text-align:center;" >
+                     <div class="icon-1"><i class="fas fa-utensils"></i></div>
+                   <!--맛집 태그 목록-->
+                     <h4 class="title" >맛집 페이지</h4>
+                     <p class="description">Lunch / Dinner</p>
+                  </div>
+                </a>
+                <a class="atag" href="{% url 'traffic'%}"><br>
+                 <div class="col-lg-4 col-md-6 icon-box" style="text-align : center; " >
+                     <div class="icon-2"><i class="fas fa-map-marker-alt"></i></div>
+                  <!-- 교통 태그 목록 -->
+                     <h4 class="title1">놀거리 페이지</h4>
+                     <p class="description1">Magnificent spectacle</p>
+                 </div>
+                </a>
+                <a class="atag" href="{% url 'covid' %}" style="text-align : center;">
+                <div class="col-lg-4 col-md-6 icon-box">
+                    <div class="icon-3"><i class="far fa-chart-bar"></i></div>
+            <!-- 코로나 태그 목록 -->
+                   <h4 class="title2">코로나 페이지</h4>
+                   <p class="description2">Covid-19 status of confirmed</p>
+                </div>
+               </a>
+              </div>
+             </section>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

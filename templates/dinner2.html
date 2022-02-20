@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dinner</title>
+    <script type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/a2b9f6b6bc.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ae7dcd352a13c7cb367986eecf086982"></script>
+    <link rel="import" href="/Allnew3/dinner.csv">
+    <style>
+        .map{
+        margin : 0px auto;
+        width:1000px;
+        height:600px;
+        }
+    </style>
+
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            $.ajax({
+                url: '../lunch.csv',
+                dataType:"text",
+                contentType: "application/x-www-form-urlencoded; charset=MS949",
+                success:function(data){
+                    var employee_data = data.split(/\r?\n|\r/);
+                    var table_data = '<table class="table table-bordered table-striped">';
+                    for(var count=0; count < employee_data.length; count++){
+                        var cell_data = employee_data[count].split(",");
+                        table_data += '<tr>';
+                        for(var cell_count = 0; cell_count < cell_data.length;
+                            cell_count++)
+                        {
+                            if(count ===0)
+                            {
+                                table_data += '<th>'+cell_data[cell_count]+'</th>';
+                            }
+                            else
+                            {
+                                table_data += '<td>'+cell_data[cell_count]+'</td>';
+                            }
+                        }
+                        table_data += '</tr>';
+                    }
+                    table_data += '</table>';
+                    $('.map').html(table_data);
+                }
+            });
+        });
+    });
+
+</script>
+</head>
+<div class="container">
+<div class="map">{%include 'dinnertable.html'%}</div>
+</div>

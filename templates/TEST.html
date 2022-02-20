@@ -1,0 +1,62 @@
+<style>
+  div{
+    width:800px;
+    border:2px solid red;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    function display(d){
+      var result ='';
+      $(d).each(function(index, item){
+       result +='<button><h1>';
+       result += index+1 + '.  ' + item.title;
+       result += '</h1></button>';
+      });
+      $('section > div').html(result);
+    };
+
+    function getdata_news(){
+      $.ajax({
+          url:'getdata_news',
+          success: function(news_data){
+            display(news_data);
+          }
+      });
+    };
+    $(document).ready(function(){
+      setInterval(function(){
+        getdata_news();
+      }, 5000);
+    });
+</script>
+<section>
+  <h1>covid</h1>
+  <button>GETDATA</button>
+  <div></div>
+  <button type="button" onclick="location.href='https://www.naver.com/'"><h1>목록</h1></button>
+  <button type="button" id="btnN">네이버</button>
+</section>
+
+      var result ='';
+      $(d).each(function(index, item){
+       result +='<button  onclick="location.href=' + item.link;
+       result +=' "><h1>';
+       result += index+1 + '.  ' + item.title;
+       result += '</h1></button>';
+      });
+      $('section > div').html(result);
+
+    $(document).ready(function(){
+      $("#btnN").click(function(){ $(location).attr("href", "https://www.naver.com/")
+      });
+      });
+
+    function movelink(d){
+      $(d).each(function(index, item){
+      location.href = item.link;
+      });
+      };
+
+
+

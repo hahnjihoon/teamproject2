@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8f30b72b40824a03873b2e4711eec7b9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_8f30b72b40824a03873b2e4711eec7b9" ></div>
+        
+</body>
+<script>    
+    
+            var map_8f30b72b40824a03873b2e4711eec7b9 = L.map(
+                "map_8f30b72b40824a03873b2e4711eec7b9",
+                {
+                    center: [37.5518898312, 126.92344997306668],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d6e72cb65d1b48fb80e0af60a134f522 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var marker_a6a6ae2e1f1349e0bbe168f5b810715d = L.marker(
+                [37.553483324, 126.921114675],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_8960193b805c461f84efb3f263cb749d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a6a6ae2e1f1349e0bbe168f5b810715d.setIcon(icon_8960193b805c461f84efb3f263cb749d);
+        
+    
+        var popup_7c06ff6264dc400e805ec016411c40b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c03421f8f2ee483b81a99e60fb85851b = $(`<div id="html_c03421f8f2ee483b81a99e60fb85851b" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/733953859>go_to_link</a></div>`)[0];
+            popup_7c06ff6264dc400e805ec016411c40b2.setContent(html_c03421f8f2ee483b81a99e60fb85851b);
+        
+
+        marker_a6a6ae2e1f1349e0bbe168f5b810715d.bindPopup(popup_7c06ff6264dc400e805ec016411c40b2)
+        ;
+
+        
+    
+    
+            marker_a6a6ae2e1f1349e0bbe168f5b810715d.bindTooltip(
+                `<div>
+                     광고홍대파스타리코  :  서울 마포구 홍익로5안길 32 준빌라     / (4.1점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_508f9cd0a19541a4b78d21d76b0fda24 = L.marker(
+                [37.553697965, 126.925171997],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_0ef191a96bd24e37b58bcac911542579 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_508f9cd0a19541a4b78d21d76b0fda24.setIcon(icon_0ef191a96bd24e37b58bcac911542579);
+        
+    
+        var popup_f2e95252ad2c43d483e98857b410fc63 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db53af9283484e5ea04cd0433d39be4a = $(`<div id="html_db53af9283484e5ea04cd0433d39be4a" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/23734945>go_to_link</a></div>`)[0];
+            popup_f2e95252ad2c43d483e98857b410fc63.setContent(html_db53af9283484e5ea04cd0433d39be4a);
+        
+
+        marker_508f9cd0a19541a4b78d21d76b0fda24.bindPopup(popup_f2e95252ad2c43d483e98857b410fc63)
+        ;
+
+        
+    
+    
+            marker_508f9cd0a19541a4b78d21d76b0fda24.bindTooltip(
+                `<div>
+                     지로우라멘  :  서울 마포구 와우산로29가길 79     / (4.1점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_547c0e13550f48ed8ef50520344c950c = L.marker(
+                [37.549944439, 126.923266184],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_8c887fc27e474b7f8218557b4cf7a3d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_547c0e13550f48ed8ef50520344c950c.setIcon(icon_8c887fc27e474b7f8218557b4cf7a3d6);
+        
+    
+        var popup_0d3c00b29db348b3ab13001728c1e89f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e9e4140b40bc46f0a16cf5039cb87b67 = $(`<div id="html_e9e4140b40bc46f0a16cf5039cb87b67" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/10361948>go_to_link</a></div>`)[0];
+            popup_0d3c00b29db348b3ab13001728c1e89f.setContent(html_e9e4140b40bc46f0a16cf5039cb87b67);
+        
+
+        marker_547c0e13550f48ed8ef50520344c950c.bindPopup(popup_0d3c00b29db348b3ab13001728c1e89f)
+        ;
+
+        
+    
+    
+            marker_547c0e13550f48ed8ef50520344c950c.bindTooltip(
+                `<div>
+                     르쁘띠푸 홍대본점  :  서울 마포구 와우산로 62 삼애빌딩 2층     / (3.6점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_53acad89c85548dca36c9768d044bbf2 = L.marker(
+                [37.553494266, 126.922499135],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_cde333ef770d4dd09ddb8e8e93bef598 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_53acad89c85548dca36c9768d044bbf2.setIcon(icon_cde333ef770d4dd09ddb8e8e93bef598);
+        
+    
+        var popup_b8ee63394be94b20aeadcd3382b209c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_35db518163f641c4a6731e985d3b1c4d = $(`<div id="html_35db518163f641c4a6731e985d3b1c4d" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/1139784588>go_to_link</a></div>`)[0];
+            popup_b8ee63394be94b20aeadcd3382b209c1.setContent(html_35db518163f641c4a6731e985d3b1c4d);
+        
+
+        marker_53acad89c85548dca36c9768d044bbf2.bindPopup(popup_b8ee63394be94b20aeadcd3382b209c1)
+        ;
+
+        
+    
+    
+            marker_53acad89c85548dca36c9768d044bbf2.bindTooltip(
+                `<div>
+                     태양커피 홍대점  :  서울 마포구 어울마당로 100-12 1층     / (4.0점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9e1d157f037d48ed9389f318bcc624cd = L.marker(
+                [37.553730306, 126.923768432],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_af36dd29dcfc47dcab76a67de9b67630 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_9e1d157f037d48ed9389f318bcc624cd.setIcon(icon_af36dd29dcfc47dcab76a67de9b67630);
+        
+    
+        var popup_652f13f945d04ed0b59d03d0549c2623 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83f6f993f4044ee4ab7c523813b16bee = $(`<div id="html_83f6f993f4044ee4ab7c523813b16bee" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/10368349>go_to_link</a></div>`)[0];
+            popup_652f13f945d04ed0b59d03d0549c2623.setContent(html_83f6f993f4044ee4ab7c523813b16bee);
+        
+
+        marker_9e1d157f037d48ed9389f318bcc624cd.bindPopup(popup_652f13f945d04ed0b59d03d0549c2623)
+        ;
+
+        
+    
+    
+            marker_9e1d157f037d48ed9389f318bcc624cd.bindTooltip(
+                `<div>
+                     땡스네이쳐  :  서울 마포구 홍익로 10 푸르지오상가 지하 121호     / (4.5점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_47935dac153545838e76da7e4a8bbd64 = L.marker(
+                [37.550085004, 126.919764719],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_db465f3e77c943ffa0ebf3dce8ae1a6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            );
+            marker_47935dac153545838e76da7e4a8bbd64.setIcon(icon_db465f3e77c943ffa0ebf3dce8ae1a6b);
+        
+    
+        var popup_a59e5e4e9a6f4d53bc4c4ca96de58ac0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1f4463dd7aa4e9fa65662474c4ab83f = $(`<div id="html_e1f4463dd7aa4e9fa65662474c4ab83f" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/24324645>go_to_link</a></div>`)[0];
+            popup_a59e5e4e9a6f4d53bc4c4ca96de58ac0.setContent(html_e1f4463dd7aa4e9fa65662474c4ab83f);
+        
+
+        marker_47935dac153545838e76da7e4a8bbd64.bindPopup(popup_a59e5e4e9a6f4d53bc4c4ca96de58ac0)
+        ;
+
+        
+    
+    
+            marker_47935dac153545838e76da7e4a8bbd64.bindTooltip(
+                `<div>
+                     오리지널시카고피자 홍대본점  :  서울 마포구 독막로7길 51 3,4층     / (4.1점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_047fe100984f47aabd4f9d28a808ae37 = L.marker(
+                [37.554420125, 126.930351235],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_baa942a2eb9648279a4ea2dece056d8f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_047fe100984f47aabd4f9d28a808ae37.setIcon(icon_baa942a2eb9648279a4ea2dece056d8f);
+        
+    
+        var popup_cb97dc25656f4e4594217df5eb653df8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eab8d21ee2b2486786604c72d58eb30c = $(`<div id="html_eab8d21ee2b2486786604c72d58eb30c" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/1551661200>go_to_link</a></div>`)[0];
+            popup_cb97dc25656f4e4594217df5eb653df8.setContent(html_eab8d21ee2b2486786604c72d58eb30c);
+        
+
+        marker_047fe100984f47aabd4f9d28a808ae37.bindPopup(popup_cb97dc25656f4e4594217df5eb653df8)
+        ;
+
+        
+    
+    
+            marker_047fe100984f47aabd4f9d28a808ae37.bindTooltip(
+                `<div>
+                     미분당 홍대점  :  서울 마포구 서강로9길 59     / (4.5점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3c2c3ac296d44dd386b01fcc1386a216 = L.marker(
+                [37.550256966, 126.922676869],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_9809d140616c4fe794919cdc44172115 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_3c2c3ac296d44dd386b01fcc1386a216.setIcon(icon_9809d140616c4fe794919cdc44172115);
+        
+    
+        var popup_bd579bfca4f44476a4a06634862819cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_408ad5f3a13349d1816e88a7119781f4 = $(`<div id="html_408ad5f3a13349d1816e88a7119781f4" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/1962732791>go_to_link</a></div>`)[0];
+            popup_bd579bfca4f44476a4a06634862819cf.setContent(html_408ad5f3a13349d1816e88a7119781f4);
+        
+
+        marker_3c2c3ac296d44dd386b01fcc1386a216.bindPopup(popup_bd579bfca4f44476a4a06634862819cf)
+        ;
+
+        
+    
+    
+            marker_3c2c3ac296d44dd386b01fcc1386a216.bindTooltip(
+                `<div>
+                     단골손님 홍대직영점  :  서울 마포구 와우산로17길 6     / (2.3점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f795b5d9eae47c885a762e74a0fde0d = L.marker(
+                [37.548833597, 126.922448984],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_d5dfd0a08e5c4c2dbf0e3c43097cd9e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2f795b5d9eae47c885a762e74a0fde0d.setIcon(icon_d5dfd0a08e5c4c2dbf0e3c43097cd9e4);
+        
+    
+        var popup_77cc605113a44d74b1ddbfb8ee0cc617 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24a60cb670e348c5a902c7b1a7f4e490 = $(`<div id="html_24a60cb670e348c5a902c7b1a7f4e490" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/1494667205>go_to_link</a></div>`)[0];
+            popup_77cc605113a44d74b1ddbfb8ee0cc617.setContent(html_24a60cb670e348c5a902c7b1a7f4e490);
+        
+
+        marker_2f795b5d9eae47c885a762e74a0fde0d.bindPopup(popup_77cc605113a44d74b1ddbfb8ee0cc617)
+        ;
+
+        
+    
+    
+            marker_2f795b5d9eae47c885a762e74a0fde0d.bindTooltip(
+                `<div>
+                     스탠스커피  :  서울 마포구 와우산로11길 9 1층 101호     / (4.3점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_98818a96f2784228a458ac32c2ef6734 = L.marker(
+                [37.554162524, 126.929956532],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_dee8aa3184014cd193b72e516557510a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_98818a96f2784228a458ac32c2ef6734.setIcon(icon_dee8aa3184014cd193b72e516557510a);
+        
+    
+        var popup_00622ed74cfc4e95b9f20c1d23bc1a0b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b7871a65129f4c9389a4c932b88d19c7 = $(`<div id="html_b7871a65129f4c9389a4c932b88d19c7" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/20557132>go_to_link</a></div>`)[0];
+            popup_00622ed74cfc4e95b9f20c1d23bc1a0b.setContent(html_b7871a65129f4c9389a4c932b88d19c7);
+        
+
+        marker_98818a96f2784228a458ac32c2ef6734.bindPopup(popup_00622ed74cfc4e95b9f20c1d23bc1a0b)
+        ;
+
+        
+    
+    
+            marker_98818a96f2784228a458ac32c2ef6734.bindTooltip(
+                `<div>
+                     아이엠어버거 홍대본점  :  서울 마포구 와우산로30길 13 1층     / (3.6점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ad0a65b485974bfebb3ba66364a7c32a = L.marker(
+                [37.548595497, 126.925125547],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_ec55fec825c84730b0f9cf059ebf3165 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+            );
+            marker_ad0a65b485974bfebb3ba66364a7c32a.setIcon(icon_ec55fec825c84730b0f9cf059ebf3165);
+        
+    
+        var popup_22e7ae294b254a1685dec45372759245 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba5c4bef14694d96a6ae075f07a57e0f = $(`<div id="html_ba5c4bef14694d96a6ae075f07a57e0f" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/1680075315>go_to_link</a></div>`)[0];
+            popup_22e7ae294b254a1685dec45372759245.setContent(html_ba5c4bef14694d96a6ae075f07a57e0f);
+        
+
+        marker_ad0a65b485974bfebb3ba66364a7c32a.bindPopup(popup_22e7ae294b254a1685dec45372759245)
+        ;
+
+        
+    
+    
+            marker_ad0a65b485974bfebb3ba66364a7c32a.bindTooltip(
+                `<div>
+                     플레이트946  :  서울 마포구 독막로19길 20-6 1층     / (4.7점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_075e453e84a74689b69b67bb9c3b8410 = L.marker(
+                [37.550066883, 126.922115134],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_78b9bbf8625d4056abb7c68dd22a1229 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_075e453e84a74689b69b67bb9c3b8410.setIcon(icon_78b9bbf8625d4056abb7c68dd22a1229);
+        
+    
+        var popup_39659229b1cb474baae36b1889b63fd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a30dcc148ee140e49353c605da5030ea = $(`<div id="html_a30dcc148ee140e49353c605da5030ea" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/831205434>go_to_link</a></div>`)[0];
+            popup_39659229b1cb474baae36b1889b63fd8.setContent(html_a30dcc148ee140e49353c605da5030ea);
+        
+
+        marker_075e453e84a74689b69b67bb9c3b8410.bindPopup(popup_39659229b1cb474baae36b1889b63fd8)
+        ;
+
+        
+    
+    
+            marker_075e453e84a74689b69b67bb9c3b8410.bindTooltip(
+                `<div>
+                     더귀여워  :  서울 마포구 와우산로17길 15 서교동빌딩 5층     / (2.7점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b59defb9a8be478f96a3923d1601216f = L.marker(
+                [37.548229583, 126.920935274],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_230f8dd4b0f945949fdeba4f88997c32 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+            );
+            marker_b59defb9a8be478f96a3923d1601216f.setIcon(icon_230f8dd4b0f945949fdeba4f88997c32);
+        
+    
+        var popup_d3994998fe3a4ce880937a2f95b6045c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dbf403177cf74180838a2f34ca67d7f4 = $(`<div id="html_dbf403177cf74180838a2f34ca67d7f4" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/26568666>go_to_link</a></div>`)[0];
+            popup_d3994998fe3a4ce880937a2f95b6045c.setContent(html_dbf403177cf74180838a2f34ca67d7f4);
+        
+
+        marker_b59defb9a8be478f96a3923d1601216f.bindPopup(popup_d3994998fe3a4ce880937a2f95b6045c)
+        ;
+
+        
+    
+    
+            marker_b59defb9a8be478f96a3923d1601216f.bindTooltip(
+                `<div>
+                     램스일레븐  :  서울 마포구 독막로 67-8     / (4.4점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_225badf672794b07b457f75e64e324d1 = L.marker(
+                [37.551877976, 126.920644304],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_26e9ca339a9b42dca66916b379ef319e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_225badf672794b07b457f75e64e324d1.setIcon(icon_26e9ca339a9b42dca66916b379ef319e);
+        
+    
+        var popup_45ec9209ed844d7e977662a37cf22155 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_325e8e9e427f40ccbe453ba9bff70772 = $(`<div id="html_325e8e9e427f40ccbe453ba9bff70772" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/1748850413>go_to_link</a></div>`)[0];
+            popup_45ec9209ed844d7e977662a37cf22155.setContent(html_325e8e9e427f40ccbe453ba9bff70772);
+        
+
+        marker_225badf672794b07b457f75e64e324d1.bindPopup(popup_45ec9209ed844d7e977662a37cf22155)
+        ;
+
+        
+    
+    
+            marker_225badf672794b07b457f75e64e324d1.bindTooltip(
+                `<div>
+                     플레이보드 홍대2호점  :  서울 마포구 잔다리로6길 20-9 3층     / (4.4점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8fd7396ef15d47d794eaebdbc0a59c50 = L.marker(
+                [37.557469013, 126.921910575],
+                {}
+            ).addTo(map_8f30b72b40824a03873b2e4711eec7b9);
+        
+    
+            var icon_b8ea0095d8b04f42b2ca8050d350582d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8fd7396ef15d47d794eaebdbc0a59c50.setIcon(icon_b8ea0095d8b04f42b2ca8050d350582d);
+        
+    
+        var popup_a43e0bff788449d98876dbd336483d5d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d937384622d54411b3abede2ea4385a9 = $(`<div id="html_d937384622d54411b3abede2ea4385a9" style="width: 100.0%; height: 100.0%;"><a href=https://place.map.kakao.com/15985522>go_to_link</a></div>`)[0];
+            popup_a43e0bff788449d98876dbd336483d5d.setContent(html_d937384622d54411b3abede2ea4385a9);
+        
+
+        marker_8fd7396ef15d47d794eaebdbc0a59c50.bindPopup(popup_a43e0bff788449d98876dbd336483d5d)
+        ;
+
+        
+    
+    
+            marker_8fd7396ef15d47d794eaebdbc0a59c50.bindTooltip(
+                `<div>
+                     이미커피  :  서울 마포구 동교로25길 7 1층     / (4.2점)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

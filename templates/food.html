@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout07</title>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ae7dcd352a13c7cb367986eecf086982"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://kit.fontawesome.com/a2b9f6b6bc.js" crossorigin="anonymous"></script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title> aing</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gugi&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+    <style>
+    body{
+    background-image:url('static/assets/img/2.jpg');
+    background-size:cover;
+    };
+        /* 리셋 */
+        * {margin: 0; padding: 0;}
+
+        /* 전체 레이아웃 */
+        #wrap {font-size: 20px; color: #fff; text-align: center;}
+        #header {height: 70px;}
+        #nav {height: 450px; line-height: 450px; background: #4dd0e1; background: rgba(0,0,0,0);}
+        #contents {height: 100%;}
+        #footer { height: 220px;}
+
+
+        /* 레이아웃 */
+        #header {font-size:50px; height: 70px; line-height: 70px; background: #b2ebf2; background: rgba(0,0,0,0);}
+        #content1 {height: 700px;  background-color: #00bcd4 background: rgba(0,0,0,0);}
+        #content2 {height: 700px;  background-color: #00bcd4 background: rgba(0,0,0,0);}
+        #footer-nav {height: 60px; line-height: 60px; background-color: #0097a7; background: rgba(0,0,0,0);}
+        #footer-info { height: 160px; line-height: 160px; background-color: #00838f; background: rgba(0,0,0,0);}
+
+        /* 컨테이너 */
+        .container {width: 1100px; margin: 0 auto; height: inherit; background: rgba(0,0,0,0); position:relative;}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #d8f7f3; background: rgba(0,0,0,0);
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #24b7a4; background: rgba(0,0,0,0);
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+.section-title p {
+  margin-bottom: 0;
+}
+a{
+text-decoration-line:none;
+color:#24B7A4;
+}
+.atag{
+      display:inline-block;
+      width:30%;
+      position:relative;
+
+    }
+h1{
+font-color:white;
+}
+a:link{
+color:white;
+}
+a:hover{
+color:#24B74A;
+}
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <a href="food"> <div class="container d-flex flex-column align-items-center"><h1>서교동 점심 저녁 맛집</h1></div></a>
+
+        </div>
+
+
+
+        <!-- //header -->
+
+        <div id="nav">
+            <div class="container">
+                <a class="img1" href = "lunch1"><img class="lunch1" src="{% static 'assets/img/lunch.jpg' %}"></a>
+                <a class="img2" href = "dinner1"><img class="dinner1" src="{% static 'assets/img/dinner.jpg' %}"></a>
+
+            </div>
+
+        </div>
+        <br><br>
+        <!-- banner -->
+        <div id="contents">
+
+
+            <div id = "content1">
+                {% if center != None %}
+                {% include center %}
+                {% else %}
+                    <div class="container"></div>
+                {% endif %}
+            </div>
+<Br><br>
+            <h2>< 목 록 ></h2>
+            <div id = "content2" style="overflow:scroll; overflow-x:hidden;">
+                {% if center != None %}
+                {% include center2 %}
+                {% else %}
+                    <div class="container"></div>
+                {% endif %}
+            </div>
+        </div>
+        <!-- //contents -->
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+    <div class="container d-flex flex-column align-items-center" >
+      <a href="home"><h1 style="color:white">서교동 소식</h1></a>
+        <br><Br><br>
+    </div>
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <br>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon-1"><i class="fas fa-utensils"></i></div><br>
+            <!--맛집 태그 목록--><br>
+            <h4 class="title"><a href="{% url 'food' %}">맛집</a></h4>
+            <p class="description"><a href="food"> Lunch/Dinner</a></p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon-2"><i class="fas fa-map-marker-alt"></i></div><br>
+            <!-- 놀거리 태그 목록 --><br>
+            <h4 class="title"><a href="{% url 'traffic' %}">놀거리</a></h4>
+            <p class="description"><a href="traffic">Magnificent spectacle</a></p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon-3"><i class="far fa-chart-bar"></i></div><br>
+            <!-- 코로나 태그 목록 --><br>
+            <h4 class="title"><a href="{% url 'covid' %}">코로나</a></h4>
+            <p class="description"><a href="covid">Covid status of confirmed</a></p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<br>
+<html lang="en">
+
+<head>
+
+  <script src="https://kit.fontawesome.com/a2b9f6b6bc.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title> Maundy - Bootstrap Coming Soon Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gugi&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Maundy - v4.6.0
+  * Template URL: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<style>
+
+body{
+background-image:url('static/assets/img/2.jpg')
+};
+
+</style>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center" ><br>
+  <a class="weatherwidget-io" href="https://forecast7.com/en/37d57126d98/seoul/" data-label_1="Seogyo-Dong" data-label_2="WEATHER" data-font="Roboto" data-icons="Climacons Animated" data-days="3" data-theme="none" >SEOUL WEATHER</a>
+    <div class="container d-flex flex-column align-items-center" style="position:absolute; margin-left:16%;" >
+      <h1>서교동 소식</h1><br>
+      <h2>서교동 여행객을 위한 맞춤 정보 제공</h2>
+    </div>
+
+  </header><!-- End #header -->
+  <main id="main">
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <br>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon-1"><i class="fas fa-utensils"></i></div><br>
+            <!--맛집 태그 목록--><br>
+            <h4 class="title"><a href="{% url 'food' %}">맛집</a></h4>
+            <p class="description"><a href="food"> 점심/저녁 맛집</a></p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon-2"><i class="fas fa-map-marker-alt"></i></div><br>
+            <!-- 놀거리 태그 목록 --><br>
+            <h4 class="title"><a href="{% url 'traffic' %}">놀거리</a></h4>
+            <p class="description"><a href="traffic">서교동 핫플레이스</a></p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon-3"><i class="far fa-chart-bar"></i></div><br>
+            <!-- 코로나 태그 목록 --><br>
+            <h4 class="title"><a href="{% url 'covid' %}">코로나</a></h4>
+            <p class="description"><a href="covid">실시간 서교동 코로나 확진 상태</a></p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h4>메시지 보내기</h4>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>위치</h4>
+                <p>서울특별시 마포구 양화로 127 첨단빌딩 7층 한국 ICT 인재개발원</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>이메일</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>전화번호</h4>
+                <p>02-739-7237</p>
+              </div>
+              <!-- 구글 지도 iframe -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.0106495409195!2d126.91835401516084!3d37.55481287980012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c99b56609aa51%3A0xa1bd0b6d813b1eda!2z7ZWc6rWtSUNU7J247J6s6rCc67Cc7JuQ!5e0!3m2!1sko!2skr!4v1643246891306!5m2!1sko!2skr" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6 mt-3 mt-md-0">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+                       <div>
+                    <a href="batch_start">batch_start</a>
+                    <a href="batch_stop">batch_stop</a>
+                 </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Maundy</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End #footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+</html>
+

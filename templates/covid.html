@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout07</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <!-- jquery 선언문 -->
+    <script src="https://kit.fontawesome.com/a2b9f6b6bc.js" crossorigin="anonymous"></script> <!-- 이모티콘 선언문 -->
+    <script>
+      function display(d){
+        var result ='';
+        $(d).each(function(index, item){
+         result +='<button style="cursor:pointer" onclick="location.href=&quot;'  + item.link  +  '&quot; "><h1>';
+         result += index+1 + '.  ' + item.title;
+         result += '</h1></button><br>';
+         });
+         $('#pp > div').html(result);
+      };
+
+      function display1(d){
+          var first='';
+          var second='';
+          var third='';
+
+          var first_con='';
+          var second_con='';
+          var third_con='';
+
+          var first_per='';
+          var second_per='';
+          var third_per='';
+
+          $(d).each(function(index, item){
+         first += item.first + ' 명';
+         second += item.second + ' 명';
+         third += item.third + ' 명';
+
+         first_con += item.first_con + ' 명';
+         second_con += item.second_con + ' 명';
+         third_con += item.third_con + ' 명';
+
+         first_per += item.first_per + ' %';
+         second_per += item.second_per + ' %';
+         third_per += item.third_per + ' %';
+
+         });
+         $('td:eq(9)').html(first);
+         $('td:eq(13)').html(second);
+         $('td:eq(17)').html(third);
+
+         $('td:eq(10)').html(first_con);
+         $('td:eq(14)').html(second_con);
+         $('td:eq(18)').html(third_con);
+
+         $('td:eq(11)').html(first_per);
+         $('td:eq(15)').html(second_per);
+         $('td:eq(19)').html(third_per);
+      }
+
+      function display2(d){
+        var confirmed='';
+        var add='';
+        $(d).each(function(index, item){
+         confirmed += item.confirmed + ' 명';
+         add += item.add + ' 명';
+         });
+         $('td:eq(1)').html(confirmed);
+         $('td:eq(3)').html(add);
+      };
+
+      function getdata_news(){
+        $.ajax({
+            url:'getdata_news',
+            success: function(news_data){
+              display(news_data);
+            }
+        });
+      };
+
+      function getdata_covid(){
+        $.ajax({
+            url:'getdata_covid',
+            success: function(corona_contents){
+              display2(corona_contents);
+            }
+        });
+      };
+
+        function getdata_vaccinated(){
+        $.ajax({
+            url:'getdata_vaccinated',
+            success: function(vaccinated_contents){
+              display1(vaccinated_contents);
+            }
+        });
+      };
+
+      $(document).ready(function(){
+          getdata_news();
+          getdata_covid();
+          getdata_vaccinated();
+      });
+    </script>
+    <style>
+        body{
+            background: rgb(91 130 163 / 60%);
+            background-size:cover;
+            background-image: linear-gradient( rgb(91 130 163 / 60%), rgb(91 130 163 / 60%) ),url('static/assets/img/2.jpg');
+        };
+
+
+
+
+        /* 리셋 */
+        * {margin: 0; padding: 0;}
+
+        /* 전체 레이아웃 */
+        #wrap {font-size: 20px; color: #fff; text-align: center;}
+        #header {height: 70px;}
+        #nav {height: 450px; line-height: 450px;}
+        #contents {height: 100%;}
+
+        /* 태그 목록 스타일 */
+        a {
+           color: #fff;
+           text-decoration: none;
+        }
+
+        /*버튼 컬러*/
+        button {
+            border:none;
+            background: rgba(0,0,0,0.0);
+        }
+
+        /* 버튼 안에 글씨 컬러*/
+        h1 {
+            color: #dff1e8;
+        }
+
+        /* 아이콘 스타일*/
+        .atag{
+          display:inline-block;
+          width:30%;
+          position:relative;
+          right : 30px;
+        }
+
+        .atag .icon-1  {
+          color: #adb5bd;
+          font-size: 55px;
+          text-align : center;
+        }
+
+        .atag .icon-2  {
+          color: #dc3545;
+          font-size: 55px;
+          text-align : center;
+        }
+
+        .atag .icon-3  {
+          color: #69e7ad;
+          font-size: 55px;
+          text-align : center;
+        }
+
+        /* 레이아웃 */
+        #header {height: 70px; line-height: 70px;}
+        #content1 {height: 700px; }
+        #content2 {height: 380px; line-height: 380px;}
+        #footer-nav { height: 300px; line-height: 39px;}
+
+
+        /* 컨테이너 */
+        .container1 {width: 1100px; margin: 0 auto; height: inherit;}
+        .container {width: 1100px; margin: 0 auto; height: inherit;}
+
+        .vaccinated{
+            position:absolute;
+            width:auto;
+            margin-left:39.5%;
+            height: 450px
+        }
+
+        table.coronic{
+            position:absolute;
+             width:auto;
+            height: 450px;
+            right: 60%;
+        }
+
+        table.coronic td{
+            width:155px;
+            padding: 10px;
+            border:1px  solid #ccc;;
+
+        }
+        table.coronic th{
+            height : 130px;
+            border:1px  solid #ccc;;
+        }
+
+        table.vaccinated th{
+            height : 130px;
+            border:1px  solid #ccc;;
+        }
+
+        table.vaccinated td{
+            width:155px;
+            padding: 10px;
+            border:1px  solid #ccc;;
+        }
+
+        </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header" >
+          <div class="container1" style=" font-size: 30px;color: #fff; text-align: center; ">마포구 코로나 현황</div>
+            <div>
+              <div>
+                  <table class="coronic"style="position:absolute;" >
+                    <tr>
+                      <th colspan="2" >마포구 확진자 현황</th>
+                    </tr>
+                    <tr>
+                      <td>총 확진자 인원</td><td>데이터 넣을 곳</td>
+                    </tr>
+                    <tr>
+                      <td>증가 확진자 인원</td><td>데이터 넣을 곳</td>
+                    </tr>
+                  </table>
+              </div>
+            </div>
+        </div>
+        <div>
+                  <table class="vaccinated">
+                    <tr>
+                      <th colspan="4">마포구 백신 접종자 현황</th>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>마포구민</td>
+                      <td>접종자</td>
+                      <td>접종률</td>
+                    </tr>
+                    <tr>
+                      <td>1차 접종</td><td>데이터 넣을 곳</td><td>데이터 넣을 곳</td><td>데이터 넣을 곳</td>
+                    </tr>
+                    <tr>
+                      <td>2차 접종</td><td>데이터 넣을 곳</td><td>데이터 넣을 곳</td><td>데이터 넣을 곳</td>
+                    </tr>
+                    <tr>
+                      <td>3차 접종</td><td>데이터 넣을 곳</td><td>데이터 넣을 곳</td><td>데이터 넣을 곳</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+        <!--코로나 테이블 끝-->
+        <!-- //header -->
+        <div id="nav">
+            <div class="container1">
+            </div>
+        </div><br>
+        <!-- banner -->
+        <div id="contents">
+            <div id = "content1">
+                <div class="container" id="pp">
+                  <h2 style=" font-size: 30px;color: #fff; text-align: center; ">코로나 관련 기사</h2><br><br>
+                  <div>
+                  </div>
+                </div>
+            </div><br><br><br><br>
+        <!-- //contents -->
+        <div id="footer">
+            <div id="footer-nav">
+             <section id="about" class="about">
+               <div class="container">
+                <a href="{% url 'home' %}"><h1 style="color:white; position: absolute; left: 43%; font-family: 'Gugi', cursive;">서교동 소식</h1></a><br><br>
+                <a class="atag" href="{% url 'food' %}"><br>
+                  <div class="col-lg-4 col-md-6 icon-box" style="text-align:center;" >
+                     <div class="icon-1"><i class="fas fa-utensils"></i></div>
+                   <!--맛집 태그 목록-->
+                     <h4 class="title" >맛집 페이지</h4>
+                     <p class="description">Lunch / Dinner</p>
+                  </div>
+                </a>
+                <a class="atag" href="{% url 'traffic'%}"><br>
+                 <div class="col-lg-4 col-md-6 icon-box" style="text-align : center; " >
+                     <div class="icon-2"><i class="fas fa-map-marker-alt"></i></div>
+                  <!-- 교통 태그 목록 -->
+                     <h4 class="title1">놀거리 페이지</h4>
+                     <p class="description1">Magnificent spectacle</p>
+                 </div>
+                </a>
+                <a class="atag" href="{% url 'covid' %}" style="text-align : center;">
+                <div class="col-lg-4 col-md-6 icon-box">
+                    <div class="icon-3"><i class="far fa-chart-bar"></i></div>
+            <!-- 코로나 태그 목록 -->
+                   <h4 class="title2">코로나 페이지</h4>
+                   <p class="description2">Covid-19 status of confirmed</p>
+                </div>
+               </a>
+              </div>
+             </section>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>
